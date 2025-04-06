@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const backendUrl = "https://hotel-booking-system-r5u2.onrender.com";
+
     // Signup
     async function signup() {
         const email = document.getElementById("signup-email").value;
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/signup", {
+            const response = await fetch(`${backendUrl}/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/login", {
+            const response = await fetch(`${backendUrl}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load Hotels
     async function getHotels() {
         try {
-            const response = await fetch("http://localhost:5000/hotels", {
+            const response = await fetch(`${backendUrl}/hotels`, {
                 method: "GET",
                 credentials: "include",
             });
