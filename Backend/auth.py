@@ -1,7 +1,7 @@
 from flask import request, jsonify, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from .app_init import app  # Corrected import to use relative import
-from .database import init_db  # Corrected import to use relative import
+from app_init import app  # Changed from relative to absolute import
+from database import init_db  # Changed from relative to absolute import
 
 # Initialize the database
 mongo = init_db(app)
