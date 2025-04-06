@@ -1,5 +1,5 @@
 from flask import request
-from .app_init import app  # Corrected import to use relative import
+from app_init import app  # Corrected import to use relative import
 from .database import init_db, add_hotel, get_hotels, get_hotel_by_name, update_hotel, delete_hotel  # Corrected import to use relative import
 from .auth import signup, login, logout  # Corrected import to use relative import
 
