@@ -1,9 +1,9 @@
 from flask import request, jsonify, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from Backend.app_init import app
-from Backend.database import init_db
+from .app_init import app  # Corrected import to use relative import
+from .database import init_db  # Corrected import to use relative import
 
-
+# Initialize the database
 mongo = init_db(app)
 
 def signup():

@@ -22,12 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ email, username, password }),
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                alert("Signup successful!");
-            } else {
+            if (!response.ok) {
+                const data = await response.json();
                 alert("Signup failed: " + data.message);
+            } else {
+                alert("Signup successful!");
             }
         } catch (error) {
             console.error("Signup Error:", error);
@@ -55,12 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ email, password }),
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                alert("Login successful!");
-            } else {
+            if (!response.ok) {
+                const data = await response.json();
                 alert("Login failed: " + data.message);
+            } else {
+                alert("Login successful!");
             }
         } catch (error) {
             console.error("Login Error:", error);

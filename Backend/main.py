@@ -1,9 +1,7 @@
 from flask import request
-from Backend.app_init import app
-from Backend.database import init_db, add_hotel, get_hotels, get_hotel_by_name, update_hotel, delete_hotel
-from Backend.auth import signup, login, logout
-from app_init import app
-
+from .app_init import app  # Corrected import to use relative import
+from .database import init_db, add_hotel, get_hotels, get_hotel_by_name, update_hotel, delete_hotel  # Corrected import to use relative import
+from .auth import signup, login, logout  # Corrected import to use relative import
 
 # Initialize the database
 mongo = init_db(app)
