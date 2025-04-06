@@ -1,7 +1,7 @@
 from flask import request
-from app_init import app  # Corrected import to use relative import
-from .database import init_db, add_hotel, get_hotels, get_hotel_by_name, update_hotel, delete_hotel  # Corrected import to use relative import
-from .auth import signup, login, logout  # Corrected import to use relative import
+from app_init import app  # Make sure this file exists in the same folder and defines the Flask app
+from database import init_db, add_hotel, get_hotels, get_hotel_by_name, update_hotel, delete_hotel
+from auth import signup, login, logout
 
 # Initialize the database
 mongo = init_db(app)
